@@ -26,7 +26,6 @@ public class UserController {
     @ResponseBody
     public User validateAndPrint(String id, String userName, String note){
         User user = new User(id,userName,note);
-
         UserValidator userValidator = (UserValidator) userService;
 
         if(userValidator.validate(user)){
